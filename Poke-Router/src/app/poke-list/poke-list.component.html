@@ -1,0 +1,7 @@
+Filter: <input type="text" [(ngModel)]="filter">
+
+<ul
+   *ngFor='let pokemon of pokeList;let i=index'>
+   <a [hidden]="!pokemon.name.includes(filter)  " routerLink='{{i+1}}'>{{ pokemon.name }}</a>
+
+</ul>
